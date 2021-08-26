@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Popdam</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <div class="upper">
+                <h1>POPDAM</h1>
+                <p><span id="score">0</span></p>
+            </div>
+
+            <div class="lower">
+                <img src="images/avatar1.PNG" alt="" onclick="addToScore(1)" />
+            </div>
+        </main>
+    </body>
+
+    <script>
+        var score = 0;
+
+        function addToScore(i) {
+            score += i;
+
+            document.getElementById("score").innerHTML = score;
+
+            const audio = new Audio();
+            audio.src = "click.mp3";
+            audio.play();
+        }
+    </script>
+</html>
