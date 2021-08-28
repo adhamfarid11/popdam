@@ -65,7 +65,7 @@ p {
 }
 
 h2 {
-    display: none;
+    visibility: hidden;
 }
 
 @media screen and (orientation: portrait) {
