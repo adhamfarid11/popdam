@@ -70,6 +70,7 @@ h2 {
 
 @media screen and (orientation: portrait) {
     h2 {
+        visibility: visible;
         font-size: 4vw;
         padding-top: 20vh;
         text-align: center;
