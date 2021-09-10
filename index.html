@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Popdam</title>
         <link rel="stylesheet" href="style.css" />
-        <link rel="shortcut icon" href="images/avatar.PNG" />
+        <link rel="shortcut icon" href="images/avatar.png" />
     </head>
     <body>
         <div class="glass" data-tilt>
@@ -16,7 +16,14 @@
             </div>
 
             <div class="lower">
-                <img src="images/avatar1.png" alt="" onclick="addToScore(1)" />
+                <img
+                    src="images/avatar1.PNG"
+                    alt=""
+                    id="dam-image"
+                    onmousedown="mousedown();addToScore(1)"
+                    onmouseup="resetImage();"
+                    onmouseleave="resetImage();"
+                />
                 <h2>It's better to use landscape <span>>:(</span></h2>
             </div>
         </div>
@@ -34,6 +41,16 @@
             const audio = new Audio();
             audio.src = "click.mp3";
             audio.play();
+        }
+
+        function mousedown() {
+            var el = document.getElementById("dam-image");
+            el.setAttribute("class", "img-clicked");
+        }
+
+        function resetImage() {
+            var el = document.getElementById("dam-image");
+            el.setAttribute("class", "img");
         }
     </script>
 </html>
